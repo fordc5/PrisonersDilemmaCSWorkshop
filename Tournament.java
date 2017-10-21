@@ -6,6 +6,8 @@ import PrisonerDilemmaTechniques
 
 public class Tournament {
 
+	private PrisonerDilemmaTechniques strategies;
+
 	//private array of dicts
 	//allplayers = Prisoner_Dilemna_Project_Turn_In.register()
 
