@@ -1,0 +1,24 @@
+//Prisoner's Dilemma Tournament
+
+import java.util.random
+
+import PrisonerDilemmaTechniques
+
+public class Tournament {
+
+	private PrisonerDilemmaTechniques strategies;
+
+	//private array of dicts
+	//allplayers = Prisoner_Dilemna_Project_Turn_In.register()
+
+	//How many rounds?
+	private static final int NUM_ROUNDS_PER_CONTEST = 50;
+	private static final int NUM_CONTESTS = 5;
+
+	runEliminationTournament(allplayers, NUM_ROUNDS_PER_CONTEST, NUM_CONTESTS);
+
+	public static void runEliminationTournament(playerList, numRoundsPerContest, numContests){
+		//...
+	}
+
+}
