@@ -6,8 +6,8 @@
         ||      ||  ||        ||      ||      ||         ||       ||  || ||   ||  ||         ||       ||      ||
         ||      ||  ||   |||||        ||      ||         ||       ||  ||  ||  ||  ||         ||   ||||        ||
         ||||||||||  ||||||            ||      |||||||||  ||       ||  ||  ||  ||  ||||||||   ||||||	          ||||||||||
-        ||	        ||||||            ||             ||  ||       ||  ||   || ||  ||         ||||||                   ||
-        ||          ||  |||	          ||             ||  ||       ||  ||   || ||  ||         ||  |||                  ||
+        ||          ||||||            ||             ||  ||       ||  ||   || ||  ||         ||||||                   ||
+        ||          ||  |||           ||             ||  ||       ||  ||   || ||  ||         ||  |||                  ||
         ||          ||    |||         ||             ||  ||       ||  ||    ||||  ||         ||   |||                 ||
         ||          ||      |||       ||             ||  ||       ||  ||    ||||  ||         ||     |||               ||
         ||          ||       |||  ||||||||||  |||||||||  |||||||||||  ||     |||  |||||||||  ||      |||      ||||||||||
@@ -35,9 +35,9 @@ Within this repository (PrisonersDilemmaCSWorkshop), you will find this README a
 
 Now, before we get started, let's talk a little bit about what a README file is for. In short, the first thing you want to do whenever looking at a repository for the first time is look at the README. Common items in this document include instructions on how to get involved, how to get the source code onto your local computer, or what the repository/code does. This README will include info on all three. 
 
-### Step One - Get the source code on your computer
+### Step One - Get this source code on your computer
 
-i) fork 
+i) Fork this repository
 
 ii) git 
 
