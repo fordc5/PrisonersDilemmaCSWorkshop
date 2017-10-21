@@ -1,0 +1,13 @@
+package tournament;
+
+public class Turn<Y, T> { 
+	
+	  public Y you; 
+	  public T them; 
+	  
+	  public Turn(Y you, T them) { 
+	    this.you = you; 
+	    this.them = them; 
+	  } 
+	  
+} 

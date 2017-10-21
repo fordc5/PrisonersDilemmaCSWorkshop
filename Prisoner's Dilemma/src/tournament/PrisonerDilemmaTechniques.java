@@ -1,5 +1,7 @@
 package tournament;
 
+import java.util.ArrayList;
+
 /** Prisoner's Dilemma Techniques/Strategies
  * 
  * This class aggregates all of the different strategies
@@ -11,9 +13,16 @@ package tournament;
 
 public class PrisonerDilemmaTechniques {
 
+	public ArrayList<Strategy> strategies = new ArrayList<Strategy>();
 	
-	public static void register() {
-		
+	//Declare strategies
+	private BubbleStategy bubbleStategy = new BubbleStategy();
+	private BurstStategy burstStategy = new BurstStategy();
+	
+	
+	public PrisonerDilemmaTechniques() {
+		strategies.add(bubbleStategy);
+		strategies.add(burstStategy);
 	}
 
 

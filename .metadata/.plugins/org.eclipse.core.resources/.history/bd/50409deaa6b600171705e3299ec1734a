@@ -1,0 +1,101 @@
+package tournament;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+/** Prisoner's Dilemma Tournament
+ * 
+ * This Tournament class takes the strategies 
+ * from the PrisonerDilemmaTechniques class and
+ * simulates them in various tournament formats.
+ * 
+ * May the best prisoner win!
+ * 
+ * @author Connor Ford
+ * @version 10/17
+ *
+ */
+
+public class Tournament {
+
+	//Number of rounds specifications
+	private static final int NUM_ROUNDS_PER_CONTEST = 50;
+	private static final int NUM_CONTESTS = 5;
+	
+	private PrisonerDilemmaTechniques strategyArr;
+	private ArrayList<Strategy> strategies;
+	
+	private ArrayList<Turn<String,String>> history = new ArrayList<Turn<String,String>>();
+
+	public Tournament() {
+		strategyArr = new PrisonerDilemmaTechniques();
+		strategies = strategyArr.strategies;
+		for (Strategy s : strategies) {
+			System.out.println(s.toString());
+		}
+		
+		// The elimination version of the tournament. At least one player 
+		// is eliminated after each round.
+		runEliminationTournament(strategies, NUM_ROUNDS_PER_CONTEST, NUM_CONTESTS);
+		
+	}
+	
+	
+	
+	public static void runEliminationTournament(ArrayList<Strategy> players, int numTransactionsPerContest, int numContests) {
+		Boolean keepRunningTournament = true;
+		while (keepRunningTournament) {
+			ArrayList<Integer> scores = runTournament(players, numTransactionsPerContest, numContests);
+			
+		}
+	}
+	/*def runEliminationTournament(playerlist, numTransactionsPerContest, numContests):
+	    keepRunningTournament = True
+	    while keepRunningTournament:
+	        scores = runTournament(playerlist, numTransactionsPerContest, numContests)
+	        playernames = scores.keys()
+	        playernames.sort(key=lambda p: scores[p], reverse=True)
+	        if allTied(playernames, scores):
+	            keepRunningTournament = False
+	        else:
+	            lowestscore = scores[playernames[-1]]
+	            playerlist = [p for p in playerlist if scores[p[0]] > lowestscore]
+	            numTransactionsPerContest += 20
+	    print
+	    print "Game Over!"
+	    print
+	    print "Winners:"
+	    for name in playernames:
+	        print "\t" + name*/
+	public static ArrayList<Integer> runTournament(ArrayList<Strategy> players, int numTransactionsPerContest, int numContests) {
+		return null;
+	}
+	
+	/*def runTournament(playerlist, numTransactionsPerContest, numContests):
+	    if len(playerlist) == 1:
+	        return {playerlist[0][0]: 0}
+	    print "Running Tournament with", len(playerlist), "Players"
+	    bestscore = 5.0 * numTransactionsPerContest * numContests * (len(playerlist)-1)
+	    scores = runRoundRobin(playerlist, numTransactionsPerContest, numContests)
+	    playernames = scores.keys()
+	    playernames.sort(key=lambda p: scores[p], reverse=True)
+	    for name in playernames:
+	        #print format(scores[name],"10d") + " points for " + name
+	        score = scores[name]
+	        percent = (score / bestscore) * 100
+	        print format(percent, "7.3f") + " percent for " + name
+	    return scores*/
+	
+	
+	
+	
+	
+	
+	public static void main(String s[]) {
+		new Tournament();
+	}
+	
+	
+	
+
+}
