@@ -22,13 +22,11 @@ public class PrisonerDilemmaTechniques {
 	public ArrayList<Strategy> strategies = new ArrayList<Strategy>();
 	
 	//Declare strategies
-	/*DECALRE YOUR STRATEGY HERE*/
 	private BubbleStategy bubbleStategy = new BubbleStategy();
 	private BurstStategy burstStategy = new BurstStategy();
 	
 	
 	public PrisonerDilemmaTechniques() {
-		/*ADD YOUR STRATEGY HERE*/
 		strategies.add(bubbleStategy);
 		strategies.add(burstStategy);
 	}

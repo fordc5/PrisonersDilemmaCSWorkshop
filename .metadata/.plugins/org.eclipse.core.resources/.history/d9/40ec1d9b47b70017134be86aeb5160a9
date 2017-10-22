@@ -1,6 +1,7 @@
 package tournament;
 
 /**
+ * 
  * @author Connor Ford
  *
  * @param <Y> strategy
@@ -8,6 +9,7 @@ package tournament;
  * 
  * Simple class for storing a player's strategy and score
  */
+
 
 public class Player<Y, T> { 
 	

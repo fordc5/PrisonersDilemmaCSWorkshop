@@ -1,6 +1,7 @@
 package tournament;
 
 /**
+ * 
  * @author Connor Ford
  *
  * @param <Y> your previous turn
@@ -8,6 +9,7 @@ package tournament;
  * 
  * Simple class emulating a 2-tuple pairing
  */
+
 
 public class Turn<Y, T> { 
 	
@@ -18,4 +20,5 @@ public class Turn<Y, T> {
 	    this.you = you; 
 	    this.them = them; 
 	  } 
+	  
 } 

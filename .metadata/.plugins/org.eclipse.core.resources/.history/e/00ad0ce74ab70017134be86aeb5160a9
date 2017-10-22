@@ -1,7 +1,6 @@
 package tournament;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 
@@ -55,13 +54,11 @@ public class Tournament {
 		while (keepRunningTournament) {
 			ArrayList<Player<Strategy,Integer>> scores = runTournament(players, numTransactionsPerContest, numContests);
 			Collections.sort(scores, (s1,s2) -> {
-				return -s1.score.compareTo(s2.score);
+				return s1.score.compareTo(s2.score);
 			});
-			// If all of the players have the same score, 
-			// then the game is over and they are the winners
 			if (allTied(scores)) {
 				keepRunningTournament = false;
-			} else { // Otherwise, eliminate player(s) with lowest score
+			} else {
 				int lowestScore = scores.get(0).score;
 				
 				// update player list to keep only players with 
@@ -76,7 +73,7 @@ public class Tournament {
 		System.out.println("Game Over!");
 		System.out.println("Winners");
 		for (Strategy s : players) {
-			//Parse this string to be only the name of the class/strategy
+			//Parse this string to be only the name of the strategy
 			System.out.println(s.toString());
 		}
 	}
@@ -89,22 +86,7 @@ public class Tournament {
 	 * @return ArrayList of each strategy and the respective score
 	 */
 	public static ArrayList<Player<Strategy,Integer>> runTournament(ArrayList<Strategy> players, int numTransactionsPerContest, int numContests) {
-		if (players.size() == 1) {
-			ArrayList<Player<Strategy,Integer>> ret = new ArrayList<Player<Strategy,Integer>>();
-			ret.add(new Player<Strategy,Integer>(players.get(0), 0));
-			return ret;
-		} 
-		System.out.println("Running Tournament with " + players.size() + " Players");
-		int bestScore = 5 * numTransactionsPerContest * numContests * (players.size() - 1);
-		ArrayList<Player<Strategy,Integer>> scores = runRoundRobin(players, numTransactionsPerContest, numContests);
-		Collections.sort(scores, (s1,s2) -> {
-			return -s1.score.compareTo(s2.score);
-		});
-		for (Player<Strategy,Integer> p : scores) {
-			int percent = (p.score / bestScore) * 100;
-			System.out.println(percent + " percent for " + p.strategy.toString());
-		}
-		return scores;
+		return null;
 	}
 	
 	/*def runTournament(playerlist, numTransactionsPerContest, numContests):
@@ -128,9 +110,7 @@ public class Tournament {
 	}
 	
 	
-	public static ArrayList<Player<Strategy,Integer>> runRoundRobin(ArrayList<Strategy> players, int numTransactionsPerContest, int numContests) {
-		return null;
-	}
+	
 	
 	
 	
