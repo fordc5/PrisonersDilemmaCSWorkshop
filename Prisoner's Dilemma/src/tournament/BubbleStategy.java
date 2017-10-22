@@ -12,8 +12,6 @@ import java.util.ArrayList;
 
 public class BubbleStategy implements Strategy {
 	
-	
-	
 	public String takeOneTurn(ArrayList<Turn<String,String>> history) {
 		return "c";
 	}

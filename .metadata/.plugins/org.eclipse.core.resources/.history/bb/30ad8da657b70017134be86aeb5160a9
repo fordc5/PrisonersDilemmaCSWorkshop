@@ -43,10 +43,6 @@ public class Tournament {
 	
 	
 	/**
-	 * Method runs an elimination tournament knocking out at least
-	 * one player per round. The tournament end when all remaining participants
-	 * have the same score. Note, this means there can be more than
-	 * one winner.
 	 * 
 	 * @param players
 	 * @param numTransactionsPerContest
@@ -85,10 +81,6 @@ public class Tournament {
 	}
 
 	/**
-	 * This is the main method that runs the actual 
-	 * tournament for each round. Pairs all of the strategies
-	 * against one another and keeps calculates the percentage
-	 * of total points won for each strategy.
 	 * 
 	 * @param players
 	 * @param numTransactionsPerContest
@@ -114,13 +106,8 @@ public class Tournament {
 		return scores;
 	}
 	
-	/**
-	 * If all of the players have the same 
-	 * score return true. Otherwise return false.
-	 * 
-	 * @param scores
-	 * @return boolean value on if all the scores are equal
-	 */
+	
+	
 	public static boolean allTied(ArrayList<Player<Strategy,Integer>> scores) {
 		int firstScore = scores.get(0).score;
 		for (Player<Strategy,Integer> players : scores) {
@@ -131,13 +118,7 @@ public class Tournament {
 		return true;
 	}
 	
-	/**
-	 * 
-	 * @param players
-	 * @param numTransactionsPerContest
-	 * @param numContests
-	 * @return an ArrayList of all of the players/strategies with their respective score counts
-	 */
+	
 	public static ArrayList<Player<Strategy,Integer>> runRoundRobin(ArrayList<Strategy> players, int numTransactionsPerContest, int numContests) {
 		ArrayList<Player<Strategy,Integer>> scores = new ArrayList<Player<Strategy,Integer>> ();
 		for (Strategy s : players) {
@@ -155,16 +136,7 @@ public class Tournament {
 		return scores;
 	}
 
-	/**
-	 * Method that runs a contest between two strategies
-	 * numTransactionsPerContest times. Keeps track of
-	 * and updates the total score for each player.
-	 * 
-	 * @param strategy1
-	 * @param strategy2
-	 * @param numTransactionsPerContest
-	 * @return a score pair from the contest
-	 */
+	
 	public static ScorePair<Integer,Integer> runContest(Strategy strategy1, Strategy strategy2, int numTransactionsPerContest) {
 		ArrayList<Turn<String,String>> history1 = new ArrayList<Turn<String,String>>();
 		ArrayList<Turn<String,String>> history2 = new ArrayList<Turn<String,String>>();
@@ -183,11 +155,7 @@ public class Tournament {
 		return new ScorePair<Integer,Integer>(score1,score2);
 	}
 
-	
 	/**
-	 * Representation of the game board.
-	 * Scores based on the four possible combinations
-	 * 
 	 * @param choice1
 	 * @param choice2
 	 * @return number of points won

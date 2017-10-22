@@ -12,6 +12,8 @@ import java.util.ArrayList;
 
 public class BurstStategy implements Strategy {
 	
+
+	
 	public String takeOneTurn(ArrayList<Turn<String,String>> history) {
 		return "d";
 	}

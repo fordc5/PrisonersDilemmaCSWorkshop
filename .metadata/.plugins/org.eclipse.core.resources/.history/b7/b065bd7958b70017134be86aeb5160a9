@@ -17,5 +17,6 @@ public class ScorePair<Y, T> {
 	  public ScorePair(Y score1, T score2) { 
 	    this.score1 = score1; 
 	    this.score2 = score2; 
-	  }  
+	  } 
+	  
 } 

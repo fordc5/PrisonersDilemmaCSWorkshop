@@ -85,10 +85,6 @@ public class Tournament {
 	}
 
 	/**
-	 * This is the main method that runs the actual 
-	 * tournament for each round. Pairs all of the strategies
-	 * against one another and keeps calculates the percentage
-	 * of total points won for each strategy.
 	 * 
 	 * @param players
 	 * @param numTransactionsPerContest
@@ -115,8 +111,6 @@ public class Tournament {
 	}
 	
 	/**
-	 * If all of the players have the same 
-	 * score return true. Otherwise return false.
 	 * 
 	 * @param scores
 	 * @return boolean value on if all the scores are equal
@@ -156,9 +150,6 @@ public class Tournament {
 	}
 
 	/**
-	 * Method that runs a contest between two strategies
-	 * numTransactionsPerContest times. Keeps track of
-	 * and updates the total score for each player.
 	 * 
 	 * @param strategy1
 	 * @param strategy2
@@ -185,9 +176,6 @@ public class Tournament {
 
 	
 	/**
-	 * Representation of the game board.
-	 * Scores based on the four possible combinations
-	 * 
 	 * @param choice1
 	 * @param choice2
 	 * @return number of points won
