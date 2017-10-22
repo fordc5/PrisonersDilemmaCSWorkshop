@@ -94,13 +94,13 @@ public class Tournament {
 			return ret;
 		} 
 		System.out.println("Running Tournament with " + players.size() + " Players");
-		double bestScore = 5.0 * numTransactionsPerContest * numContests * (players.size() - 1);
+		int bestScore = 5 * numTransactionsPerContest * numContests * (players.size() - 1);
 		ArrayList<Player<Strategy,Integer>> scores = runRoundRobin(players, numTransactionsPerContest, numContests);
 		Collections.sort(scores, (s1,s2) -> {
 			return -s1.score.compareTo(s2.score);
 		});
 		for (Player<Strategy,Integer> p : scores) {
-			double percent = (p.score / bestScore) * 100.0;
+			int percent = (p.score / bestScore) * 100;
 			System.out.println(percent + " percent for " + p.strategy.toString());
 		}
 		return scores;
@@ -138,28 +138,26 @@ public class Tournament {
 
 	
 	public static ScorePair<Integer,Integer> runContest(Strategy strategy1, Strategy strategy2, int numTransactionsPerContest) {
-		ArrayList<Turn<String,String>> history1 = new ArrayList<Turn<String,String>>();
-		ArrayList<Turn<String,String>> history2 = new ArrayList<Turn<String,String>>();
-		int score1 = 0;
-		int score2 = 0;
-		for (int i = 0; i < numTransactionsPerContest; i++) {
-			String choice1 = strategy1.takeOneTurn(history1);
-			String choice2 = strategy2.takeOneTurn(history2);
-			int payoff1 = payoff(choice1,choice2);
-			int payoff2 = payoff(choice2,choice1);
-			score1 += payoff1;
-			score2 += payoff2;
-			history1.add(new Turn<String,String>(choice1,choice2));
-			history2.add(new Turn<String,String>(choice2,choice1));
-		}
-		return new ScorePair<Integer,Integer>(score1,score2);
+		return null;
 	}
-
-	/**
-	 * @param choice1
-	 * @param choice2
-	 * @return number of points won
-	 */
+	/*
+	def runContest(player1, player2, numTransactions):
+	    history1 = []
+	    history2 = []
+	    score1 = 0
+	    score2 = 0
+	    for i in range(numTransactions):
+	        choice1 = player1(history1)
+	        choice2 = player2(history2)
+	        payoff1 = payoff(choice1, choice2)
+	        payoff2 = payoff(choice2, choice1)
+	        score1 += payoff1
+	        score2 += payoff2
+	        history1.append((choice1,choice2))
+	        history2.append((choice2,choice1))
+	    return (score1, score2)
+	*/
+	
 	public static int payoff(String choice1, String choice2) {
 		if (choice1 == "c" && choice2 == "c") {
 			return 3;
@@ -177,6 +175,18 @@ public class Tournament {
 			throw new IllegalArgumentException("Your strategy must return a 'c' or a 'd' (note the lower case)");
 		}
 	}
+	
+	/*
+def payoff(choice1, choice2):
+    if (choice1 == "c" and choice2 == "c"):
+        return 3
+    if (choice1 == "c" and choice2 == "d"):
+        return 0
+    if (choice1 == "d" and choice2 == "c"):
+        return 5
+    if (choice1 == "d" and choice2 == "d"):
+        return 1
+	 */
 	
 	
 	public static void main(String s[]) {

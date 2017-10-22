@@ -94,13 +94,13 @@ public class Tournament {
 			return ret;
 		} 
 		System.out.println("Running Tournament with " + players.size() + " Players");
-		double bestScore = 5.0 * numTransactionsPerContest * numContests * (players.size() - 1);
+		int bestScore = 5 * numTransactionsPerContest * numContests * (players.size() - 1);
 		ArrayList<Player<Strategy,Integer>> scores = runRoundRobin(players, numTransactionsPerContest, numContests);
 		Collections.sort(scores, (s1,s2) -> {
 			return -s1.score.compareTo(s2.score);
 		});
 		for (Player<Strategy,Integer> p : scores) {
-			double percent = (p.score / bestScore) * 100.0;
+			int percent = (p.score / bestScore) * 100;
 			System.out.println(percent + " percent for " + p.strategy.toString());
 		}
 		return scores;
@@ -135,48 +135,26 @@ public class Tournament {
 		}
 		return scores;
 	}
-
+	/*
+	def runRoundRobin(playerlist, numTransactions, numContests):
+	    scores = dict()
+	    for (name, function) in playerlist:
+	        scores[name] = 0
+	    for contestNum in range(numContests):
+	        for index1 in range(0, len(playerlist)):
+	            for index2 in range(index1+1, len(playerlist)):
+	                (player1name, player1function) = playerlist[index1]
+	                (player2name, player2function) = playerlist[index2]
+	                (score1, score2) = runContest(player1function, player2function, numTransactions)
+	                scores[player1name] += score1
+	                scores[player2name] += score2
+	    return scores
+	   */
 	
 	public static ScorePair<Integer,Integer> runContest(Strategy strategy1, Strategy strategy2, int numTransactionsPerContest) {
-		ArrayList<Turn<String,String>> history1 = new ArrayList<Turn<String,String>>();
-		ArrayList<Turn<String,String>> history2 = new ArrayList<Turn<String,String>>();
-		int score1 = 0;
-		int score2 = 0;
-		for (int i = 0; i < numTransactionsPerContest; i++) {
-			String choice1 = strategy1.takeOneTurn(history1);
-			String choice2 = strategy2.takeOneTurn(history2);
-			int payoff1 = payoff(choice1,choice2);
-			int payoff2 = payoff(choice2,choice1);
-			score1 += payoff1;
-			score2 += payoff2;
-			history1.add(new Turn<String,String>(choice1,choice2));
-			history2.add(new Turn<String,String>(choice2,choice1));
-		}
-		return new ScorePair<Integer,Integer>(score1,score2);
+		return null;
 	}
-
-	/**
-	 * @param choice1
-	 * @param choice2
-	 * @return number of points won
-	 */
-	public static int payoff(String choice1, String choice2) {
-		if (choice1 == "c" && choice2 == "c") {
-			return 3;
-		} 
-		if (choice1 == "c" && choice2 == "d") {
-			return 0;
-		} 
-		if (choice1 == "d" && choice2 == "c") {
-			return 5;
-		}
-		if (choice1 == "d" && choice2 == "d") {
-			return 1;
-		}
-		else {
-			throw new IllegalArgumentException("Your strategy must return a 'c' or a 'd' (note the lower case)");
-		}
-	}
+	
 	
 	
 	public static void main(String s[]) {

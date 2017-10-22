@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @author ConnorFord
  *
  * Very simple interface for the strategies. The Classes
- * must all implement the one method takeOneTurn(history)
+ * must all implement the one method takeOneTurn(hisory)
  */
 
 public interface Strategy {

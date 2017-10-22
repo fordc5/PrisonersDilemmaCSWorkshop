@@ -25,14 +25,12 @@ public class PrisonerDilemmaTechniques {
 	/*DECALRE YOUR STRATEGY HERE*/
 	private BubbleStategy bubbleStategy = new BubbleStategy();
 	private BurstStategy burstStategy = new BurstStategy();
-	private Messi messi = new Messi();
 	
 	
 	public PrisonerDilemmaTechniques() {
 		/*ADD YOUR STRATEGY HERE*/
 		strategies.add(bubbleStategy);
 		strategies.add(burstStategy);
-		strategies.add(messi);
 	}
 
 

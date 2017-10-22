@@ -94,13 +94,13 @@ public class Tournament {
 			return ret;
 		} 
 		System.out.println("Running Tournament with " + players.size() + " Players");
-		double bestScore = 5.0 * numTransactionsPerContest * numContests * (players.size() - 1);
+		int bestScore = 5 * numTransactionsPerContest * numContests * (players.size() - 1);
 		ArrayList<Player<Strategy,Integer>> scores = runRoundRobin(players, numTransactionsPerContest, numContests);
 		Collections.sort(scores, (s1,s2) -> {
 			return -s1.score.compareTo(s2.score);
 		});
 		for (Player<Strategy,Integer> p : scores) {
-			double percent = (p.score / bestScore) * 100.0;
+			int percent = (p.score / bestScore) * 100;
 			System.out.println(percent + " percent for " + p.strategy.toString());
 		}
 		return scores;
