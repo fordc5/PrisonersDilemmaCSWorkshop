@@ -71,14 +71,19 @@ Congratulations! Your first open source development contribution!
 i) [Link to other tutorial]
 
 ii) Git resources:
--
+Git tutorial: https://try.github.io/levels/1/challenges/1
+Git cheat sheet: https://www.git-tower.com/blog/git-cheat-sheet
 
 iii) GitHub resources:
--
+Popular projects on GitHub: https://github.com/explore
+GitHub's help page: https://help.github.com/articles/git-and-github-learning-resources/
 
 iv) Open source resources:
--
+Good resource for first-timers: http://www.firsttimersonly.com/
+Udacity tutorial: https://www.udacity.com/course/how-to-use-git-and-github--ud775
+
+But seriously, open source development is a steep learning curve. It may be tough at first, but jumping head first into a project will get you to where you want to be faster than any series of tutorials will.
 
 v) Other neat projects/sites:
--
+You get a ton of cool, free stuff as a student on GitHub. Check it out here: https://education.github.com/pack
 
