@@ -70,9 +70,9 @@ Congratulations! Your first open source development contribution!
 
 i) [Link to other tutorial]
 
-ii) Git resources: \n
-Git tutorial: https://try.github.io/levels/1/challenges/1 \n
-Git cheat sheet: https://www.git-tower.com/blog/git-cheat-sheet
+ii) Git resources:  
+Git tutorial: https://try.github.io/levels/1/challenges/1  
+Git cheat sheet: https://www.git-tower.com/blog/git-cheat-sheet  
 
 iii) GitHub resources:
 Popular projects on GitHub: https://github.com/explore
