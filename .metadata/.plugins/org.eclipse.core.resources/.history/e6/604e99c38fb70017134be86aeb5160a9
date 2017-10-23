@@ -78,13 +78,11 @@ public class Tournament {
 				}
 			}
 		}
-		System.out.println("");
 		System.out.println("Game Over!");
-		System.out.println("Winners: ");
-		System.out.println("");
+		System.out.println("Winners");
 		for (Strategy s : players) {
 			//Parse this string to be only the name of the class/strategy
-			System.out.println(s.toString().substring(11).split("@")[0]);
+			System.out.println(s.toString());
 		}
 	}
 
@@ -113,7 +111,7 @@ public class Tournament {
 		});
 		for (Player<Strategy,Integer> p : scores) {
 			double percent = (p.score / bestScore) * 100.0;
-			System.out.println(percent + " percent for " + p.strategy.toString().substring(11).split("@")[0]);
+			System.out.println(percent + " percent for " + p.strategy.toString());
 		}
 		return scores;
 	}
