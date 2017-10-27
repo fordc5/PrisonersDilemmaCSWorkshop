@@ -17,11 +17,11 @@
         ||      ||      ||      ||         ||           ||||        ||||  ||||        ||||  ||       ||     
         ||      ||      ||      ||         ||           || ||      || ||  || ||      || ||  ||       ||     
         ||      ||      ||      ||         ||           ||  ||    ||  ||  ||  ||    ||  ||  ||       ||     
-        ||      ||      ||      ||         ||||||||||   ||  ||    ||  ||  ||  ||    ||  ||   |||||||||		
+        ||      ||      ||      ||         ||||||||||   ||  ||    ||  ||  ||  ||    ||  ||   |||||||||          
         ||      ||      ||      ||         ||           ||   ||  ||   ||  ||   ||  ||   ||  ||       ||           
         ||      ||      ||      ||         ||           ||   ||  ||   ||  ||   ||  ||   ||  ||       ||         
         ||      ||      ||      ||         ||           ||    ||||    ||  ||    ||||    ||  ||       ||        
-        ||      ||      ||      ||         ||           ||    ||||    ||  ||    ||||    ||  ||       ||       	
+        ||      ||      ||      ||         ||           ||    ||||    ||  ||    ||||    ||  ||       ||         
         |||||||||   ||||||||||  |||||||||  |||||||||||  ||     ||     ||  ||     ||     ||  ||       ||      
 ```
 
@@ -48,7 +48,7 @@ iii) Enter in the various details...
 
 iv) Once you are finished come back to this page. 
 
-v) Now open up your terminal. We are going to install git if you do not already have it. (On a mac you can check what version of git you have installed by running **git --version**)
+v) Now open up your terminal. We are going to install git if you do not already have it. (On a mac you can check what version of git you have installed by running **git --version**)  
 
 vi) You are going to run two commands to get git. The first is installing some software called [Homebrew](https://brew.sh/). Homebrew's awesome, you'll use it for installing lots of cool stuff in the future. The second command uses Homebrew to install git.
 
@@ -105,7 +105,7 @@ But for contributing to this specific repository you have to follow a set of gui
 
 ### Step Three - How to contribute
 
-This might be the most important section of any major GitHub repository. This is because you can make all sorts of changes and improvements to someone else's code, but if you don't follow the posted guidelines, when you 'submit' your changes, they might get rejected. Often times owners of the repository will specify things like spaces vs. tabs, what parts of the code they want you to touch, what other developers you can reach out to, etc...
+This might be the most important section of any major GitHub repository. This is because you can make all sorts of changes and improvements to someone else's code, but if you don't follow the posted guidelines, when you 'submit' your changes, they might get rejected. Often times owners of the repository will specify things from spaces vs. tabs, to what parts of the code they want you to touch, to what other developers you can reach out to, etc...
 
 i) Editing the code
 1. Create a new class within the package src/tournament and call it whatever you want
@@ -153,4 +153,3 @@ But seriously, open source development is a steep learning curve. It may be toug
 
 v) Other neat projects/sites:  
 You get a ton of cool, free stuff as a student on GitHub. Check it all out here: https://education.github.com/pack  
-
