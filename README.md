@@ -39,13 +39,29 @@ Now, before we get started, let's talk a little bit about what a README file is 
 
 So let's dive right in.
 
+### Before you begin - Create an account
+
+i) If you already have a GitHub account, great! (Go ahead and skip to Step One) If not, let's create one.
+
+ii) In the upper right of this page you should see a login button. Select that.
+
+iii) Select 'Create a new account' on this next page
+
 ### Step One - Get the source code onto your computer
 
-i) Fork this repository
+i) Fork this repository. Do this by clicking the Fork button in the upper right of this page. What this does is copy the current version of this repository onto your own GitHub page!
+	(a) You will then see a pop up that asks...
+	...
+	(d) Now navigate to your profile page and you should see this forked repository sitting there.
 
-ii) clone your forked version locally 
+ii) At this stage, all of the code it still in the cloud, but we want to get a copy down onto your personal computer. We will do this by **cloning** your forked version locally.
 
 iii) open the code Eclipse or another IDE/editor of your choice
+	(a) At the top of Eclipse select File -> Import -> General -> Existing Projects into Workspace
+	(b) Now navigate to where you cloned the repository locally. (i.e. select the folder presumably with the name: PrisonersDilemmaCSWorkshop).
+	(c) Click enter and now you should have the project listed in your Package Explorer sidebar.
+
+Congratulations for making it this far! You have completed the hardest part. Often times with open source projects, getting the code locally without any bugs in the appropriate software is half the battle.
 
 ### Step Two - What this code does
 
