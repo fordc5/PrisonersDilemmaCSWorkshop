@@ -65,18 +65,35 @@ Congratulations for making it this far! You have completed the hardest part. Oft
 
 ### Step Two - What this code does
 
-i) info on tournament
+i) Now that you have the code locally, let's learn a little bit about what it does. The purpose is to simulate a Prisoner's Dilemma tournament. If you do not know anything about Prisoner's Dilemma [click here](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma). 
 
-ii) info on what to edit/change
+The object of the code is to write you own strategy for the game, and then to run it against other strategies to try and come out on top.
+
+The rules are pretty simple. You are given a history of all rounds played between you and another player. And then you are to make a decision whether to cooperate or not. If both players cooperate you get 3 points; if you cooperate and your opponent does not you get 0 points; if neither player cooperates you get 1 points; and finally if you defect and your opponent cooperates you get 5 points.
+
+ii) So, what code should you change?
+
+Well, there's sort of two answers here. The first is that you could change anything you want! You could turn this code into a website, change the tournament rules, make/delete players, really anything! That's the exciting part about open source code typically.
+
+But for contributing to this specific repository you have to follow a set of guidelines. You can find those in the next section.
+
 
 ### Step Three - How to contribute
 
-i) Create a new class within the package src/tournament 
-        - You can see examples of ones I have made
+This might be the most important section of major GitHub repositories. This is because you can make all sorts of changes and improvements to someone else's code, but if you don't follow the posted guidelines, when you 'submit' your changes, they might get rejected. Often times authors will specify things like spaces v. tabs, what parts of the code they want you to touch, what other developers can you reach out to, etc...
 
-ii) add, commit, push to local branch
+i) Editing the code
+	(a) Create a new class within the package src/tournament and call it whatever you want
+	(b) Implement the interface Strategy at the top of your class
+	(c) Fill in the method takeOneTurn(history) making sure that you return a "c" or a "d" every time.
+	(d) Open the PrisonerDilemmaTechniques class and follow the pattern already there for adding your strategy to the game.
+	(e) Finally you can go to the Tournament class and run that code to see how your strategy did! Best of Luck!
 
-iii) make a pull request to this repository
+ii) **add**, **commit**, **push** 
+	(a) So you've made your changes, and now you're ready for the whole world to see it.
+	(b)
+
+iii) Make a **pull request** to this repository
 
 Congratulations! Your first open source development contribution!
 
@@ -84,7 +101,7 @@ Congratulations! Your first open source development contribution!
 
 ### Resources
 
-i) [Link to other tutorial]  
+i) Check out this[link to another simpler tutorial](githublink) if you'd like more practice with the fundamentals.
 
 ii) Git resources:  
 Git tutorial: https://try.github.io/levels/1/challenges/1  
@@ -101,5 +118,5 @@ Udacity tutorial: https://www.udacity.com/course/how-to-use-git-and-github--ud77
 But seriously, open source development is a steep learning curve. It may be tough at first, but jumping head first into a project will get you to where you want to be faster than any series of tutorials will.  
 
 v) Other neat projects/sites:  
-You get a ton of cool, free stuff as a student on GitHub. Check it out here: https://education.github.com/pack  
+You get a ton of cool, free stuff as a student on GitHub. Check it all out here: https://education.github.com/pack  
 
