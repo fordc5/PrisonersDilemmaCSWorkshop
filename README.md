@@ -43,11 +43,11 @@ So let's dive right in.
 
 i) If you already have a GitHub account and git installed, great! (Go ahead and skip to Step One) If not, follow along below.  
 
-ii) In the upper right of this page you should see a login button. Select that.  
+ii) In the upper right of this page you should see a **Sign up** button. Select that.  
 
-iii) Select 'Create a new account' on this next page..  
+iii) Enter in the various details...
 
-iv)  
+iv) Once you are finished come back to this page. 
 
 v) Now open up your terminal. We are going to install git if you do not already have it. (On a mac you can check what version of git you have installed by running **git --version**)
 
@@ -77,6 +77,10 @@ i) Fork this repository. Do this by clicking the Fork button in the upper right 
 2. Now navigate to your profile page and you should see this forked repository sitting there.
 
 ii) At this stage, all of the code it still in the cloud, but we want to get a copy down onto your personal computer. We will do this by **cloning** your forked version locally.
+1. Open up terminal and cd to your worksspace. (i.e. something along the lines of ```$ Documents/ComputerScience/CS52/workspace/```)
+2. Now go back to the repository on your page and click **Clone or Download** button.
+3. A little pop-up will apear. Click the **Copy to clipboard** button on the right side.
+4. Open your terminal and type ```$ git clone [paste your url here]```. 
 
 iii) open the code Eclipse or another IDE/editor of your choice
 1. At the top of Eclipse select File -> Import -> General -> Existing Projects into Workspace
