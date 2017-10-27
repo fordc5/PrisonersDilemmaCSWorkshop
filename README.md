@@ -50,16 +50,16 @@ iii) Select 'Create a new account' on this next page
 ### Step One - Get the source code onto your computer
 
 i) Fork this repository. Do this by clicking the Fork button in the upper right of this page. What this does is copy the current version of this repository onto your own GitHub page!
-	(a) You will then see a pop up that asks...
+	a. You will then see a pop up that asks...
 	...
-	(d) Now navigate to your profile page and you should see this forked repository sitting there.
+	d. Now navigate to your profile page and you should see this forked repository sitting there.
 
 ii) At this stage, all of the code it still in the cloud, but we want to get a copy down onto your personal computer. We will do this by **cloning** your forked version locally.
 
 iii) open the code Eclipse or another IDE/editor of your choice
-	(a) At the top of Eclipse select File -> Import -> General -> Existing Projects into Workspace
-	(b) Now navigate to where you cloned the repository locally. (i.e. select the folder presumably with the name: PrisonersDilemmaCSWorkshop).
-	(c) Click enter and now you should have the project listed in your Package Explorer sidebar.
+	a. At the top of Eclipse select File -> Import -> General -> Existing Projects into Workspace
+	b. Now navigate to where you cloned the repository locally. (i.e. select the folder presumably with the name: PrisonersDilemmaCSWorkshop).
+	c. Click enter and now you should have the project listed in your Package Explorer sidebar.
 
 Congratulations for making it this far! You have completed the hardest part. Often times with open source projects, getting the code locally without any bugs in the appropriate software is half the battle.
 
@@ -83,15 +83,15 @@ But for contributing to this specific repository you have to follow a set of gui
 This might be the most important section of major GitHub repositories. This is because you can make all sorts of changes and improvements to someone else's code, but if you don't follow the posted guidelines, when you 'submit' your changes, they might get rejected. Often times authors will specify things like spaces v. tabs, what parts of the code they want you to touch, what other developers can you reach out to, etc...
 
 i) Editing the code
-	(a) Create a new class within the package src/tournament and call it whatever you want
-	(b) Implement the interface Strategy at the top of your class
-	(c) Fill in the method takeOneTurn(history) making sure that you return a "c" or a "d" every time.
-	(d) Open the PrisonerDilemmaTechniques class and follow the pattern already there for adding your strategy to the game.
-	(e) Finally you can go to the Tournament class and run that code to see how your strategy did! Best of Luck!
+	a. Create a new class within the package src/tournament and call it whatever you want
+	b. Implement the interface Strategy at the top of your class
+	c. Fill in the method takeOneTurn(history) making sure that you return a "c" or a "d" every time.
+	d. Open the PrisonerDilemmaTechniques class and follow the pattern already there for adding your strategy to the game.
+	e. Finally you can go to the Tournament class and run that code to see how your strategy did! Best of Luck!
 
 ii) **add**, **commit**, **push** 
-	(a) So you've made your changes, and now you're ready for the whole world to see it.
-	(b)
+	a. So you've made your changes, and now you're ready for the whole world to see it.
+	b.
 
 iii) Make a **pull request** to this repository
 
