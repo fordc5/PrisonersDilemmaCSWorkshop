@@ -64,7 +64,8 @@ $ git --version
 To make sure git installed.
 
 vii) Configure your username and email by typing
-```$ git config --global user.name "Tiago Ford"
+```
+$ git config --global user.name "Tiago Ford"
 $ git config --global user.email "tford@email.com"
 ```
 
