@@ -29,6 +29,7 @@ public class PrisonerDilemmaTechniques {
 	private Messi messi = new Messi();
 	private TheGreatDefector tGD = new TheGreatDefector();
 	private Randy randy = new Randy();
+	private Squire squire = new Squire();
 	
 	
 	public PrisonerDilemmaTechniques() {
@@ -38,6 +39,7 @@ public class PrisonerDilemmaTechniques {
 		strategies.add(messi);
 		strategies.add(tGD);
 		strategies.add(randy);
+		strategies.add(squire);
 	}
 
 

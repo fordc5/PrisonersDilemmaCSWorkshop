@@ -59,8 +59,10 @@ public class Tournament {
 		Boolean keepRunningTournament = true;
 		while (keepRunningTournament) {
 			ArrayList<Player<Strategy,Integer>> scores = runTournament(players, numTransactionsPerContest, numContests);
+			// Sorts increasing so lowest score on top
+			// [makes removal O(1)]
 			Collections.sort(scores, (s1,s2) -> {
-				return -s1.score.compareTo(s2.score);
+				return s1.score.compareTo(s2.score);
 			});
 			// If all of the players have the same score, 
 			// then the game is over and they are the winners
