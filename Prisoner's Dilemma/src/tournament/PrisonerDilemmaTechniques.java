@@ -30,6 +30,7 @@ public class PrisonerDilemmaTechniques {
 	private TheGreatDefector tGD = new TheGreatDefector();
 	private Randy randy = new Randy();
 	private Squire squire = new Squire();
+	private HitForHat hFH = new HitForHat();
 	
 	
 	public PrisonerDilemmaTechniques() {
@@ -40,6 +41,7 @@ public class PrisonerDilemmaTechniques {
 		strategies.add(tGD);
 		strategies.add(randy);
 		strategies.add(squire);
+		strategies.add(hFH);
 	}
 
 
