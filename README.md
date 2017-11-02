@@ -83,6 +83,7 @@ ii) At this stage, all of the code it still in the cloud, but we want to get a c
 3. A little pop-up will apear. Click the **Copy to clipboard** button on the right side.
 4. Open your terminal and type ```$ git clone [paste your url here]```. 
 5. We are using the 'Forking Workflow'. This is defined by a couple key ideas: 1) Each contributer has two git repositories (one locally and the other on their server-side git page) 2) contributers can only push to their server side git repos and 3) only the repository maintainer can integrate changes into the official repository. These 3 key pieces make this workflow type ideal for open-source development.
+6. Move into the directory you just created ```$ cd PrisonersDilemmaCSWorkshop/```
 6. Add a remote to the official repository (this one): ```$ git remote add upstream https://github.com/fordc5/PrisonersDilemmaCSWorkshop.git
 ``` This allows you to keep your local copy easily up to date with whatever changes are made to the official repo.
 7. Create a new branch using ```$ git checkout -b some-feature-name``` You always want to create a new branch whenever working on a new feature! i.e. right now for the code you will soon be writing.
@@ -111,20 +112,24 @@ But for contributing to this specific repository you have to follow a set of gui
 
 ### Step Three - How to contribute
 
-This might be the most important section of any major GitHub repository. This is because you can make all sorts of changes and improvements to someone else's code, but if you don't follow the posted guidelines, when you 'submit' your changes, they might get rejected. Often times owners of the repository will specify things from spaces vs. tabs, to what parts of the code they want you to touch, to what other developers you can reach out to, etc...
+This might be the most important section of any major GitHub repository. This is because you can make all sorts of changes and improvements to someone else's code, but if you don't follow the posted guidelines, when you 'submit'/Pull Request your changes, they might get rejected. Often times owners of the repository will specify things from spaces vs. tabs, to what parts of the code they want you to touch, to what other developers you can reach out to, etc...
 
 i) Editing the code
-1. Create a new class within the package src/tournament and call it whatever you want
+1. Create a new class within the package src/tournament.strategies and call it whatever you want
 2. Implement the interface Strategy at the top of your class
-3. Fill in the method takeOneTurn(history) making sure that you return a "c" or a "d" every time. (This is your strategy!)
+3. Import java.util.ArrayList, tournament.Strategy, and tournament.Turn at the top of your Class as well. 
+3. Fill in the method takeOneTurn(history) making sure that you return a "c" or a "d" (note lower case) every time. This is your strategy!
 4. Open the PrisonerDilemmaTechniques class and follow the pattern already there for adding your strategy to the game.
 5. Finally you can go to the Tournament class and run that code to see how your strategy did! Best of Luck!
+6. There's a ton of other things you can play with and tweak in the Tournament class including but not limited to Tournament format and length.
+7. If you want to help me out by trying to make the simulation faster you're more than welcome!
 
 ii) **add**, **commit**, **push** 
 1. So you've made your changes, and now you're ready for the whole world to see it.
 2. After you have tested your code to make sure there are no bugs, save it all and open up the terminal.
-3. Use the command cd to navigate to the directory you are working in. (i.e. it might look something like ```$ cd Documents/ComputerScience/CS52/workspace/PrisonersDilemmaCSWorkshop```)
-4. The run ```$ git commit -a -m "[some sort of descriptive message here]"```
+3. Use the command cd to navigate to the directory you are working in if you are not already in it. (i.e. it might look something like ```$ cd Documents/ComputerScience/CS52/workspace/PrisonersDilemmaCSWorkshop```)
+4. ```$ git add .``` (Note the period at the end)
+4. The run ```$ git commit -m "[some sort of descriptive message here]"```
 5. And finally run ```$ git push origin some-feature-name```
 
 
