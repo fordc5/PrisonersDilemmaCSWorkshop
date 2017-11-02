@@ -21,8 +21,8 @@ import java.util.Random;
 public class Tournament {
 
 	//Number of rounds specifications
-	private static final int NUM_ROUNDS_PER_CONTEST = 50;
-	private static final int NUM_CONTESTS = 5;
+	private static final int NUM_ROUNDS_PER_CONTEST = 100;
+	private static final int NUM_CONTESTS = 25;
 	
 	private PrisonerDilemmaTechniques strategyArr;
 	private ArrayList<Strategy> strategies;

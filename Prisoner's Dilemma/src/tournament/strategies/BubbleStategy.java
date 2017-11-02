@@ -1,6 +1,8 @@
-package tournament;
+package tournament.strategies;
 
 import java.util.ArrayList;
+import tournament.Strategy;
+import tournament.Turn;
 
 /**
  * 

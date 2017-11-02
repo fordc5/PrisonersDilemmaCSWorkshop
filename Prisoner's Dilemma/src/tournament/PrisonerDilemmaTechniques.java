@@ -1,6 +1,7 @@
 package tournament;
 
 import java.util.ArrayList;
+import tournament.strategies.*;
 
 /** Prisoner's Dilemma Techniques/Strategies
  * 
@@ -26,6 +27,8 @@ public class PrisonerDilemmaTechniques {
 	private BubbleStategy bubbleStategy = new BubbleStategy();
 	private BurstStategy burstStategy = new BurstStategy();
 	private Messi messi = new Messi();
+	private TheGreatDefector tGD = new TheGreatDefector();
+	private Randy randy = new Randy();
 	
 	
 	public PrisonerDilemmaTechniques() {
@@ -33,6 +36,8 @@ public class PrisonerDilemmaTechniques {
 		strategies.add(bubbleStategy);
 		strategies.add(burstStategy);
 		strategies.add(messi);
+		strategies.add(tGD);
+		strategies.add(randy);
 	}
 
 

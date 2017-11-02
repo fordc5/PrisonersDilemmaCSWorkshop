@@ -1,7 +1,10 @@
-package tournament;
+package tournament.strategies;
 
 import java.util.ArrayList;
 import java.util.Random;
+
+import tournament.Strategy;
+import tournament.Turn;
 
 /**
  * 
