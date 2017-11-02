@@ -34,7 +34,7 @@ Within this repository (PrisonersDilemmaCSWorkshop), you will find this README a
 
 Now, before we get started, let's talk a little bit about what a README file is for. In short, the first thing you want to do whenever looking at a new repository for the first time is to look at the README. (i.e. exactly what you are doing right now!) Common items in a README include instructions on how to get involved in the project, how to get the source code onto your local environment (computer), or what the repository/code base does. This particular README will include info on all three in addition to more general information about Git, GitHub, open source development, and further resources to get you going.
 
-(Note, if you are completely new to Git and GitHub you might want to begin first with a different, slightly more basic GitHub repository/tutorial on my page: AnIntroToGitAndGitHub)
+(Note, if you are completely new to Git and GitHub you might want to begin first with a different, slightly more basic GitHub repository/tutorial on my page: [AnIntroToGitAndGitHub](https://github.com/fordc5/AnIntroToGitAndGitHub))
 
 So let's dive right in.
 
@@ -50,7 +50,7 @@ iv) Once you are finished come back to this page.
 
 v) Now open up your terminal. We are going to install git if you do not already have it. (On a mac you can check what version of git you have installed by running **git --version**)  
 
-vi) You are going to run two commands to get git. The first is installing some software called [Homebrew](https://brew.sh/). Homebrew's awesome, you'll use it for installing lots of cool stuff in the future. The second command uses Homebrew to install git.
+vi) On a Mac you are going to run two commands to get git. The first is installing some software called [Homebrew](https://brew.sh/). Homebrew's awesome, you'll use it for installing lots of cool stuff in the future. The second command uses Homebrew to install git.
 
 ```
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -63,6 +63,8 @@ $ git --version
 ```
 To make sure git installed.
 
+[On Windows OS installation is different, but still easy. Google 'git installation Windows' and follow instructions from there.]
+
 vii) Configure your username and email by typing
 ```
 $ git config --global user.name "Tiago Ford"
@@ -72,8 +74,7 @@ $ git config --global user.email "tford@email.com"
 ### Step One - Get the source code onto your computer
 
 i) Fork this repository. Do this by clicking the Fork button in the upper right of this page. What this does is copy the current version of this repository onto your own GitHub page!
-1. You will then see a pop up that asks...
-...
+1. You might then see a pop up that asks where you would like to fork. If you see this select your profile.
 2. Now navigate to your profile page and you should see this forked repository sitting there.
 
 ii) At this stage, all of the code it still in the cloud, but we want to get a copy down onto your personal computer. We will do this by **cloning** your forked version locally.
@@ -81,7 +82,10 @@ ii) At this stage, all of the code it still in the cloud, but we want to get a c
 2. Now go back to the repository on your page and click **Clone or Download** button.
 3. A little pop-up will apear. Click the **Copy to clipboard** button on the right side.
 4. Open your terminal and type ```$ git clone [paste your url here]```. 
-5. Now type 
+5. We are using the 'Forking Workflow'. This is defined by a couple key ideas: 1) Each contributer has two git repositories (one locally and the other on their server-side git page) 2) contributers can only push to their server side git repos and 3) only the repository maintainer can integrate changes into the official repository. These 3 key pieces make this workflow type ideal for open-source development.
+6. Add a remote to the official repository (this one): ```$ git remote add upstream https://github.com/fordc5/PrisonersDilemmaCSWorkshop.git
+``` This allows you to keep your local copy easily up to date with whatever changes are made to the official repo.
+7. Create a new branch using ```$ git checkout -b some-feature-name``` You always want to create a new branch whenever working on a new feature! i.e. right now for the code you will soon be writing.
 
 iii) open the code in Eclipse or another IDE/editor of your choice
 1. At the top of Eclipse select File -> Import -> General -> Existing Projects into Workspace
@@ -120,9 +124,8 @@ ii) **add**, **commit**, **push**
 1. So you've made your changes, and now you're ready for the whole world to see it.
 2. After you have tested your code to make sure there are no bugs, save it all and open up the terminal.
 3. Use the command cd to navigate to the directory you are working in. (i.e. it might look something like ```$ cd Documents/ComputerScience/CS52/workspace/PrisonersDilemmaCSWorkshop```)
-4. Next, run ```$ git add .``` (note the period after the space)
-5. The run ```$ git commit -m "[some sort of descriptive message here]"```
-6. And finally run ```$ git push```
+4. The run ```$ git commit -a -m "[some sort of descriptive message here]"```
+5. And finally run ```$ git push origin some-feature-name```
 
 
 iii) Make a **pull request** to this repository
@@ -134,6 +137,20 @@ iii) Make a **pull request** to this repository
 Congratulations! Your first open source development contribution!
 
 
+### Git Flow Summary
+(From Atlassian resource)
+
+In summary, below is the Forking Workflow path we followed. It might have felt like a lot, but each of the steps are relatively simple in themselves. With a little practice this will feel second-nature before you know it.
+
+1. A developer 'forks' an 'official' server-side repository. This creates their own server-side copy.
+2. The new server-side copy is cloned to their local system.
+3. A Git remote path for the 'official' repository is added to the local clone.
+4. A new local feature branch is created.
+5. The developer makes changes on the new branch.
+6. New commits are created for the changes.
+7. The branch gets pushed to the developer's own server-side copy.
+8. The developer opens a pull request from the new branch to the 'official' repository.
+9. The pull request gets approved for merge and is merged into the original server-side repository
 
 ### Resources
 
@@ -142,6 +159,7 @@ i) Check out this [link to another simpler tutorial](githublink) if you'd like m
 ii) Git resources:  
 Git tutorial: https://try.github.io/levels/1/challenges/1  
 Git cheat sheet: https://www.git-tower.com/blog/git-cheat-sheet  
+Git Workflow types: https://www.atlassian.com/git/tutorials/comparing-workflows
 
 iii) GitHub resources:  
 Popular projects on GitHub: https://github.com/explore  
