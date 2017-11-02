@@ -81,6 +81,7 @@ ii) At this stage, all of the code it still in the cloud, but we want to get a c
 2. Now go back to the repository on your page and click **Clone or Download** button.
 3. A little pop-up will apear. Click the **Copy to clipboard** button on the right side.
 4. Open your terminal and type ```$ git clone [paste your url here]```. 
+5. Now type 
 
 iii) open the code in Eclipse or another IDE/editor of your choice
 1. At the top of Eclipse select File -> Import -> General -> Existing Projects into Workspace
