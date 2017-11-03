@@ -15,15 +15,7 @@ import tournament.Turn;
 public class HatForHit implements Strategy{
 
 	public String takeOneTurn(ArrayList<Turn<String,String>> history) {
-		if (history.size() == 0) {
-			return "c";
-		} else {
-			if (history.get(history.size()-1).them == "c") {
 				return "c";
-			} else {
-				return "d";
 			}
 		}
-	}
-
-}
+	
