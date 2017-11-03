@@ -6,13 +6,14 @@ import java.util.Collections;
 import java.util.Random;
 
 /** Prisoner's Dilemma Tournament
- * 
- * This Tournament class takes the strategies 
+ *
+ *hellllloooooo
+ * This Tournament class takes the strategies
  * from the PrisonerDilemmaTechniques class and
  * simulates them in various tournament formats.
- * 
+ *
  * May the best prisoner win!
- * 
+ *
  * @author Connor Ford
  * @version 10/17
  *
@@ -23,7 +24,7 @@ public class Tournament {
 	//Number of rounds specifications
 	private static final int NUM_ROUNDS_PER_CONTEST = 100;
 	private static final int NUM_CONTESTS = 25;
-	
+
 	private PrisonerDilemmaTechniques strategyArr;
 	private ArrayList<Strategy> strategies;
 
@@ -37,19 +38,19 @@ public class Tournament {
 			System.out.println(s.toString().substring(11).split("@")[0]);
 		}
 		System.out.println("");
-		
-		// The elimination version of the tournament. At least one player 
+
+		// The elimination version of the tournament. At least one player
 		// is eliminated after each round.
 		runEliminationTournament(strategies, NUM_ROUNDS_PER_CONTEST, NUM_CONTESTS);
 	}
-	
-	
+
+
 	/**
 	 * Method runs an elimination tournament knocking out at least
 	 * one player per round. The tournament end when all remaining participants
 	 * have the same score. Note, this means there can be more than
 	 * one winner.
-	 * 
+	 *
 	 * @param players
 	 * @param numTransactionsPerContest
 	 * @param numContests
@@ -64,14 +65,14 @@ public class Tournament {
 			Collections.sort(scores, (s1,s2) -> {
 				return s1.score.compareTo(s2.score);
 			});
-			// If all of the players have the same score, 
+			// If all of the players have the same score,
 			// then the game is over and they are the winners
 			if (allTied(scores)) {
 				keepRunningTournament = false;
 			} else { // Otherwise, eliminate player(s) with lowest score
 				int lowestScore = scores.get(0).score;
-				
-				// update player list to keep only players with 
+
+				// update player list to keep only players with
 				// scores greater than the lowest score
 				for (Player<Strategy,Integer> p : scores) {
 					if (p.score == lowestScore) {
@@ -91,11 +92,11 @@ public class Tournament {
 	}
 
 	/**
-	 * This is the main method that runs the actual 
+	 * This is the main method that runs the actual
 	 * tournament for each round. Pairs all of the strategies
 	 * against one another and keeps calculates the percentage
 	 * of total points won for each strategy.
-	 * 
+	 *
 	 * @param players
 	 * @param numTransactionsPerContest
 	 * @param numContests
@@ -106,7 +107,7 @@ public class Tournament {
 			ArrayList<Player<Strategy,Integer>> ret = new ArrayList<Player<Strategy,Integer>>();
 			ret.add(new Player<Strategy,Integer>(players.get(0), 0));
 			return ret;
-		} 
+		}
 		System.out.println("Running Tournament with " + players.size() + " Players");
 		double bestScore = 5.0 * numTransactionsPerContest * numContests * (players.size() - 1);
 		ArrayList<Player<Strategy,Integer>> scores = runRoundRobin(players, numTransactionsPerContest, numContests);
@@ -119,11 +120,11 @@ public class Tournament {
 		}
 		return scores;
 	}
-	
+
 	/**
-	 * If all of the players have the same 
+	 * If all of the players have the same
 	 * score return true. Otherwise return false.
-	 * 
+	 *
 	 * @param scores
 	 * @return boolean value on if all the scores are equal
 	 */
@@ -136,9 +137,9 @@ public class Tournament {
 		}
 		return true;
 	}
-	
+
 	/**
-	 * 
+	 *
 	 * @param players
 	 * @param numTransactionsPerContest
 	 * @param numContests
@@ -165,7 +166,7 @@ public class Tournament {
 	 * Method that runs a contest between two strategies
 	 * numTransactionsPerContest times. Keeps track of
 	 * and updates the total score for each player.
-	 * 
+	 *
 	 * @param strategy1
 	 * @param strategy2
 	 * @param numTransactionsPerContest
@@ -189,11 +190,11 @@ public class Tournament {
 		return new ScorePair<Integer,Integer>(score1,score2);
 	}
 
-	
+
 	/**
 	 * Representation of the game board.
 	 * Scores based on the four possible combinations
-	 * 
+	 *
 	 * @param choice1
 	 * @param choice2
 	 * @return number of points won
@@ -201,10 +202,10 @@ public class Tournament {
 	public static int payoff(String choice1, String choice2) {
 		if (choice1 == "c" && choice2 == "c") {
 			return 3;
-		} 
+		}
 		if (choice1 == "c" && choice2 == "d") {
 			return 0;
-		} 
+		}
 		if (choice1 == "d" && choice2 == "c") {
 			return 5;
 		}
@@ -215,10 +216,10 @@ public class Tournament {
 			throw new IllegalArgumentException("Your strategy must return a 'c' or a 'd' (note the lower case)");
 		}
 	}
-	
-	
+
+
 	public static void main(String s[]) {
 		new Tournament();
 	}
-	
+
 }
