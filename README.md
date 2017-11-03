@@ -84,9 +84,8 @@ ii) At this stage, all of the code it still in the cloud, but we want to get a c
 4. Open your terminal and type ```$ git clone [paste your url here]```. 
 5. We are using the 'Forking Workflow'. This is defined by a couple key ideas: 1) Each contributer has two git repositories (one locally and the other on their server-side git page) 2) contributers can only push to their server side git repos and 3) only the repository maintainer can integrate changes into the official repository. These 3 key pieces make this workflow type ideal for open-source development.
 6. Move into the directory you just created ```$ cd PrisonersDilemmaCSWorkshop/```
-6. Add a remote to the official repository (this one): ```$ git remote add upstream https://github.com/fordc5/PrisonersDilemmaCSWorkshop.git
-``` This allows you to keep your local copy easily up to date with whatever changes are made to the official repo.
-7. Create a new branch using ```$ git checkout -b some-feature-name``` You always want to create a new branch whenever working on a new feature! i.e. right now for the code you will soon be writing.
+7. Add a remote to the official repository (this one): ```$ git remote add upstream https://github.com/fordc5/PrisonersDilemmaCSWorkshop.git``` This allows you to keep your local copy easily up to date with whatever changes are made to the official repo.
+8. Create a new branch using ```$ git checkout -b some-feature-name``` You always want to create a new branch whenever working on a new feature! i.e. right now for the code you will soon be writing.
 
 iii) open the code in Eclipse or another IDE/editor of your choice
 1. At the top of Eclipse select File -> Import -> General -> Existing Projects into Workspace
@@ -129,8 +128,8 @@ ii) **add**, **commit**, **push**
 2. After you have tested your code to make sure there are no bugs, save it all and open up the terminal.
 3. Use the command cd to navigate to the directory you are working in if you are not already in it. (i.e. it might look something like ```$ cd Documents/ComputerScience/CS52/workspace/PrisonersDilemmaCSWorkshop```)
 4. ```$ git add .``` (Note the period at the end)
-4. The run ```$ git commit -m "[some sort of descriptive message here]"```
-5. And finally run ```$ git push origin some-feature-name```
+5. The run ```$ git commit -m "[some sort of descriptive message here]"```
+6. And finally run ```$ git push origin some-feature-name```
 
 
 iii) Make a **pull request** to this repository
