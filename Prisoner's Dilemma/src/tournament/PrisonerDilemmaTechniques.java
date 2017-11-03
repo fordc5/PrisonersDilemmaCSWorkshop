@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import tournament.strategies.*;
 
 /** Prisoner's Dilemma Techniques/Strategies
- * 
+ *
  * This class aggregates all of the different strategies.
- * 
+ *
  * **********************
  * Make sure you add your strategy here if you want it
  * to run in the tournament. Follow the format below
  * for adding strategies.
  * **********************
- * 
+ *
  * @author Connor Ford
  * @version 10/17
  *
@@ -21,7 +21,7 @@ import tournament.strategies.*;
 public class PrisonerDilemmaTechniques {
 
 	public ArrayList<Strategy> strategies = new ArrayList<Strategy>();
-	
+
 	//Declare strategies
 	/*DECALRE YOUR STRATEGY HERE*/
 	private BubbleStategy bubbleStategy = new BubbleStategy();
@@ -31,8 +31,9 @@ public class PrisonerDilemmaTechniques {
 	private Randy randy = new Randy();
 	private Squire squire = new Squire();
 	private HitForHat hFH = new HitForHat();
-	
-	
+	private HatforHit haz = new HatForHit();
+
+
 	public PrisonerDilemmaTechniques() {
 		/*ADD YOUR STRATEGY HERE*/
 		strategies.add(bubbleStategy);
@@ -42,6 +43,7 @@ public class PrisonerDilemmaTechniques {
 		strategies.add(randy);
 		strategies.add(squire);
 		strategies.add(hFH);
+    strategies.add(haz);
 	}
 
 
