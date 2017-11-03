@@ -31,6 +31,7 @@ public class PrisonerDilemmaTechniques {
 	private Randy randy = new Randy();
 	private Squire squire = new Squire();
 	private HitForHat hFH = new HitForHat();
+	private strategy1 strategy1 = new strategy1();
 	private HatforHit haz = new HatForHit();
 
 
@@ -43,6 +44,7 @@ public class PrisonerDilemmaTechniques {
 		strategies.add(randy);
 		strategies.add(squire);
 		strategies.add(hFH);
+		strategies.add(strategy1);
     strategies.add(haz);
 	}
 
